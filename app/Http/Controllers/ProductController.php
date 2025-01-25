@@ -5,22 +5,22 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
-class JobController extends Controller
+class ProductController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index(): View
     {
-        $jobs = [
-            'Backend Developer',
-            'Frontend Developer',
-            'Fullstack Developer',
-            'DevOps Engineer',
-            'Data Scientist',
+        $products = [
+            'Monstera Earings',
+            'Body Earings',
+            'Cactus Earings',
+            'Palm Earings',
+            'Fern Earings',
         ];
 
-        return view('jobs.index', compact('jobs'));
+        return view('products.index', compact('products'));
     }
 
     /**
@@ -28,7 +28,7 @@ class JobController extends Controller
      */
     public function create(): View
     {
-        return view('jobs.create');
+        return view('products.create');
     }
 
     /**
